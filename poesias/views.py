@@ -27,3 +27,25 @@ def user_view(request, username):
 def root_view(request):
     return HttpResponse("Estamos na Raiz 2. Porta 8000")
 
+def contexto(request):
+    context = {
+        'nome': 'João',
+        'idade': 30,
+        'hobbies': ['Leitura', 'Ciclismo', 'Cozinhar']
+    }
+    return render(request, 'contexto.html', context)
+
+def sobre(request):
+    return render(request, 'sobre.html')
+
+def produtos(request):
+    context = {
+        'nome': 'Ana Helouise',
+        'autor': 'José Regi',
+        'loja': 'Nossa Loja',
+        'livros_disponiveis': ['Silencio Acentuado', 'Humanuscrito', 'Minha Pena']
+    }
+    return render(request, 'produtos.html', context)
+
+def contato(request):
+    return render(request, 'contato.html')

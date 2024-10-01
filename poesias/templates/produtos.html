@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Produtos</title>
+    <style>
+        /* Estilo geral */
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            color: #555;
+            font-size: 2.5rem;
+            margin-top: 40px;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            color: #555;
+            font-size: 2rem;
+            margin: 30px 0;
+            padding-left: 20px;
+        }
+
+        h3 {
+            color: #555;
+            font-size: 2rem;
+            margin: 30px 0;
+            padding-left: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        li {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            font-size: 1.2rem;
+            color: #333;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilo responsivo */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem-vindo, {{ nome }}!</h1>
+    <div class="container">
+        <h2>Livros disponíveis:</h2>
+        <ul>
+            {% for livro in livros_disponiveis %}
+            <li>{{ livro }}</li>
+            {% endfor %}
+        </ul>
+        <h3>Autor: {{ autor }}</h3>
+    </div>
+</body>
+</html>
