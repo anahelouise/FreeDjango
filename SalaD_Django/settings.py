@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'poesias',
-    'fepi_tech_event',
 ]
 
 MIDDLEWARE = [
