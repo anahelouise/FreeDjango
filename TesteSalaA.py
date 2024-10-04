@@ -1,1 +1,0 @@
-# na sala A está funcionado perfeitamente
