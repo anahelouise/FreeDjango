@@ -21,6 +21,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('poesias.urls')),
     path('poesias/', include('poesias.urls')),
-    path('', include('fepi_tech_event.urls')),
-    path('fepi_tech_event/', include('fepi_tech_event.urls')),
 ]
